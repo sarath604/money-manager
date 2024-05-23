@@ -33,6 +33,7 @@ class TransactionDb implements TransactionDbFunctions {
     list.sort((first, second) => second.date.compareTo(first.date));
     transactionlistNotifier.value.clear();
     transactionlistNotifier.value.addAll(list);
+    // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
     transactionlistNotifier.notifyListeners();
   }
 
