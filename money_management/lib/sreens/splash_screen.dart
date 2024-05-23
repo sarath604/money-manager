@@ -12,7 +12,7 @@ class ScreenSplash extends StatefulWidget {
 class _ScreenSplashState extends State<ScreenSplash> {
   @override
   void initState() {
-   gotoHomescreen();
+   gotoScreenHome();
     super.initState();
   }
 
@@ -38,7 +38,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
     );
   }
 
-  Future<void> gotoHomescreen() async {
+  Future<void> gotoScreenHome() async {
     await Future.delayed(
       const Duration(seconds: 2),
     );
