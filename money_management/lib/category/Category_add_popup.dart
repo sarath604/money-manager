@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:money_management/db/category/category_db.dart';
+import 'package:money_management/main.dart';
 import 'package:money_management/models/category/category_models.dart';
 
 ValueNotifier<CategoryType> selectedCategoryNotifier =
@@ -35,6 +36,10 @@ Future<void> ShowCategoryAddPopup(BuildContext context) async {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
+               style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateColor.resolveWith((states) => appcolor),
+                ),
               onPressed: () {
                 final _name = _nameEditingController.text;
                 if (_name.isEmpty) {
@@ -70,6 +75,8 @@ class RadioButton extends StatelessWidget {
             valueListenable: selectedCategoryNotifier,
             builder: (BuildContext ctx, CategoryType newCategory, Widget? _) {
               return Radio<CategoryType>(
+                fillColor: MaterialStateColor.resolveWith(
+                            (states) => appcolor),
                 value: type,
                 groupValue: newCategory,
                 onChanged: (value) {
