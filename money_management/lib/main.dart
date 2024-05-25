@@ -5,7 +5,8 @@ import 'package:money_management/models/transactions/transaction_model.dart';
 import 'package:money_management/sreens/splash_screen.dart';
 
 import 'package:money_management/transactions/add_transactions.dart';
- final appcolor =  Color.fromARGB(199, 6, 14, 159);
+
+const appcolor = Color.fromARGB(199, 6, 14, 159);
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
@@ -34,7 +35,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor:appcolor ,
+        colorScheme: ColorScheme.fromSeed(seedColor: appcolor),
+        primaryColor: appcolor,
+        
       ),
       home: const ScreenSplash(),
       routes: {

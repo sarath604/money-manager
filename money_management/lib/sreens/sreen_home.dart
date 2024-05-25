@@ -8,9 +8,7 @@ import 'package:money_management/transactions/screen_transaction.dart';
 
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key});
-
   static ValueNotifier<int> selectedindex = ValueNotifier(0);
-
   final _page = const [ScreenTransaction(), ScreenCategory()];
 
   @override
@@ -37,10 +35,10 @@ class ScreenHome extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (selectedindex.value == 0) {
-            print('add teansaction');
+           // print('add teansaction');
             Navigator.of(context).pushNamed(ScreenaddTransaction.routename);
           } else {
-            print('add category');
+          //  print('add category');
 
             ShowCategoryAddPopup(context);
           }
