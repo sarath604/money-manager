@@ -19,7 +19,7 @@ class ScreenHome extends StatelessWidget {
         leading: Image.asset(
           'C:/Users/pro/Desktop/New folder/money_management/assets/1715927131801-removebg-preview.png',
         ),
-        title: const Text('MONEY MANAGER'),
+        title: const Text('MONEY MANAGE'),
         centerTitle: true,
         backgroundColor: appcolor,
       ),

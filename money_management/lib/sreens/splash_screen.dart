@@ -26,7 +26,7 @@ class _ScreenSplashState extends State<ScreenSplash> {
           Image.asset(
               'C:/Users/pro/Desktop/New folder/money_management/assets/1715927131801-removebg-preview.png'),
           const Text(
-            'MONEY MANAGER',
+            'MONEY MANAGE',
             style: TextStyle(
               fontSize: 30,
               color: Colors.white,
